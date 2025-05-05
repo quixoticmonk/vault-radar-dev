@@ -1,6 +1,12 @@
 # Vault Radar Infrastructure
 
-This directory contains the Terraform configuration for setting up the HCP Vault Radar infrastructure. The infrastructure includes an HCP Vault cluster, service principals, authentication methods, and secret engines required for Vault Radar to function.
+This directory contains the Terraform configuration for setting up the HCP Vault Radar infrastructure. The infrastructure includes an HCP Vault cluster, service principals, authentication methods, and secret engines required for Vault Radar to function and allow a remediation action to copy discovered secrets to Vault.
+
+> [!NOTE]
+> Few of the crucial steps in the HCP Vault Radar setup is currently manual as the HCP API reference documentation doesn't include any path to do so and hence the hcp provider doesn't support Vault Radar outside of the notification integrations.
+> </br> 1. Connecting an Existing Secrets Manager ( Vault)
+> </br> 2. Creating a Vault Radar agent pool
+> </br> 3. Creating a Remediation action with the associated secrets manager
 
 ## Components
 
